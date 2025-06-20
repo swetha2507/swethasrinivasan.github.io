@@ -47,16 +47,16 @@ export default function Home() {
             {/* Text Content Column */}
             <div className="flex-1 space-y-6 text-[#e0e0e0] max-w-3xl">
               <p className="text-lg leading-relaxed">
-                I'm Swetha Srinivasan, a backend and data-focused engineer currently pursuing my Master's in Information Technology and Analytics at RIT. I enjoy building systems that do the heavy lifting quietly — from serverless apps and clean APIs to real-time dashboards and ETL pipelines.
+                I&apos;m Swetha Srinivasan, a backend and data-focused engineer currently pursuing my Master&apos;s in Information Technology and Analytics at RIT. I enjoy building systems that do the heavy lifting quietly — from serverless apps and clean APIs to real-time dashboards and ETL pipelines.
               </p>
               <p className="text-lg leading-relaxed">
-                Over the last few years, I've worked across cloud infrastructure (AWS, Terraform), Python-based ETL tools, SQL databases, and frontend frameworks like React. For data visualization, I use tools like Tableau and Power BI to turn insights into clear, compelling visuals. I love solving complex problems and making them feel effortless.
+                Over the last few years, I&apos;ve worked across cloud infrastructure (AWS, Terraform), Python-based ETL tools, SQL databases, and frontend frameworks like React. For data visualization, I use tools like Tableau and Power BI to turn insights into clear, compelling visuals. I love solving complex problems and making them feel effortless.
               </p>
               <p className="text-lg leading-relaxed">
-                Outside of tech, I've been trained in Carnatic music (an Indian classical music form) for over 12 years and have performed multiple solo concerts — it's taught me discipline, stage confidence, and how to stay calm under pressure (very helpful during deploys!).
+                Outside of tech, I&apos;ve been trained in Carnatic music (an Indian classical music form) for over 12 years and have performed multiple solo concerts — it&apos;s taught me discipline, stage confidence, and how to stay calm under pressure (very helpful during deploys!).
               </p>
               <p className="text-lg leading-relaxed">
-                Right now, I'm looking for a full-time role where I can grow as an engineer, work on meaningful projects, and learn from a team that cares about building things the right way. I'm open to roles across the U.S. and happy to relocate for the right opportunity.
+                Right now, I&apos;m looking for a full-time role where I can grow as an engineer, work on meaningful projects, and learn from a team that cares about building things the right way. I&apos;m open to roles across the U.S. and happy to relocate for the right opportunity.
               </p>
 
               {/* Quick Links */}
@@ -185,7 +185,7 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Message</h3>
                 <p className="text-gray-600 mb-6">
-                  I'm always open to discussing new opportunities, interesting projects, or just having a friendly chat about technology.
+                  I&apos;m always open to discussing new opportunities, interesting projects, or just having a friendly chat about technology.
                 </p>
                 <div className="space-y-3">
                   <a
