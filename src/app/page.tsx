@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect } from 'react';
 import Image from 'next/image';
 import ProjectsSection from '../Projects/ProjectsSection';
 import EducationSection from '../Education/EducationSection';
@@ -8,23 +5,9 @@ import ExperienceSection from '../Experience/ExperienceSection';
 import SkillsSection from '../Skills/SkillsSection';
 import LeadershipSection from '../Leadership/LeadershipSection';
 import CertificationsSection from '../Certifications/CertificationsSection';
-import { useRouter, useSearchParams } from 'next/navigation';
+import QuickLinks from '../components/QuickLinks';
 
 export default function Home() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    // Check if there's a section to scroll to
-    const section = searchParams.get('section');
-    if (section) {
-      const element = document.getElementById(section);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [searchParams]);
-
   return (
     <div className="bg-white">
       {/* Intro Section */}
@@ -60,29 +43,7 @@ export default function Home() {
               </p>
 
               {/* Quick Links */}
-              <div className="flex flex-wrap gap-4 pt-4">
-                <button 
-                  onClick={() => {
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                    router.push('/?section=contact', { scroll: false });
-                  }}
-                  className="inline-flex items-center px-6 py-3 bg-teal-500 hover:bg-teal-400 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-                >
-                  Get in Touch
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </button>
-                <button 
-                  onClick={() => {
-                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-                    router.push('/?section=projects', { scroll: false });
-                  }}
-                  className="inline-flex items-center px-6 py-3 border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-                >
-                  View Projects
-                </button>
-              </div>
+              <QuickLinks />
             </div>
           </div>
         </div>

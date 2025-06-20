@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
+import { Suspense } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <Navigation />
+        <Suspense fallback={<div></div>}>
+          <Navigation />
+        </Suspense>
         {/* Main Content */}
         <main className="min-h-screen bg-white pt-16">
           {children}
