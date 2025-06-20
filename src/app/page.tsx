@@ -10,17 +10,6 @@ import LeadershipSection from '../Leadership/LeadershipSection';
 import CertificationsSection from '../Certifications/CertificationsSection';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-const NAV_LINKS = [
-  { href: '#home', label: 'Home' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#education', label: 'Education' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#leadership', label: 'Leadership & Activities' },
-  { href: '#certifications', label: 'Certifications' },
-  { href: '#contact', label: 'Contact' },
-];
-
 export default function Home() {
   const router = useRouter();
   const searchParams = useSearchParams();

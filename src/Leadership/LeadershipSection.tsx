@@ -268,23 +268,6 @@ function LeadershipPopup({ role, onClose }: { role: LeadershipRole | null; onClo
   );
 }
 
-function LogoPlaceholder({ organization }: { organization: string }) {
-  const initials = organization
-    .split(' ')
-    .map(word => word[0])
-    .join('')
-    .toUpperCase()
-    .slice(0, 2);
-
-  return (
-    <div className="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm">
-      <span className="text-xl font-bold text-yellow-700">
-        {initials}
-      </span>
-    </div>
-  );
-}
-
 export default function LeadershipSection() {
   const [selectedRole, setSelectedRole] = useState<LeadershipRole | null>(null);
 

@@ -10,17 +10,6 @@ export const metadata: Metadata = {
   description: 'Software and Data Engineer Portfolio',
 };
 
-const NAV_LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/?section=projects', label: 'Projects' },
-  { href: '/?section=education', label: 'Education' },
-  { href: '/?section=experience', label: 'Experience' },
-  { href: '/?section=skills', label: 'Skills' },
-  { href: '/?section=leadership', label: 'Leadership & Activities' },
-  { href: '/?section=certifications', label: 'Certifications' },
-  { href: '/?section=contact', label: 'Contact' },
-];
-
 export default function RootLayout({
   children,
 }: {

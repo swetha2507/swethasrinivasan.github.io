@@ -46,7 +46,7 @@ export default function EducationSection() {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {EDUCATION.map((edu, index) => (
+          {EDUCATION.map((edu) => (
             <motion.div
               key={edu.school}
               variants={cardVariants}

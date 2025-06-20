@@ -79,11 +79,6 @@ export default function Navigation() {
     router.push(href, { scroll: false });
     setIsMenuOpen(false); // Close menu on click
   };
-  
-  const getSectionFromHref = (href: string) => {
-      if (!href.includes('?')) return 'home';
-      return href.split('section=')[1];
-  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#1e2633] shadow-lg">

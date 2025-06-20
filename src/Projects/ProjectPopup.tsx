@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 interface ProjectPopupProps {
   open: boolean;
@@ -13,42 +13,6 @@ interface ProjectPopupProps {
   bigDescription: string[];
   technologies: string[];
 }
-
-// Helper function to categorize technologies
-const categorizeTech = (tech: string) => {
-  const categories = {
-    cloud: ['AWS', 'Azure', 'GCP', 'Lambda', 'S3', 'DynamoDB', 'API Gateway', 'Cognito'],
-    infra: ['Docker', 'Kubernetes', 'Terraform', 'CI/CD', 'GitHub Actions'],
-    auth: ['Cognito', 'OAuth', 'JWT'],
-    ml: ['Python', 'Machine Learning', 'XGBoost', 'SVM', 'Regression', 'NLP', 'LlamaIndex'],
-    data: ['SQL', 'SQLite', 'Pandas', 'NumPy', 'Data Visualization', 'ETL'],
-    frontend: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
-    backend: ['Python', 'Node.js', 'Flask', 'Express'],
-    tools: ['Git', 'Prefect', 'Airflow', 'Streamlit', 'Power BI', 'Tableau']
-  };
-
-  for (const [category, techs] of Object.entries(categories)) {
-    if (techs.some(t => tech.toLowerCase().includes(t.toLowerCase()))) {
-      return category;
-    }
-  }
-  return 'other';
-};
-
-const getCategoryColor = (category: string) => {
-  const colors = {
-    cloud: 'bg-blue-50 text-blue-700 border-blue-200',
-    infra: 'bg-purple-50 text-purple-700 border-purple-200',
-    auth: 'bg-red-50 text-red-700 border-red-200',
-    ml: 'bg-green-50 text-green-700 border-green-200',
-    data: 'bg-cyan-50 text-cyan-700 border-cyan-200',
-    frontend: 'bg-orange-50 text-orange-700 border-orange-200',
-    backend: 'bg-indigo-50 text-indigo-700 border-indigo-200',
-    tools: 'bg-gray-50 text-gray-700 border-gray-200',
-    other: 'bg-yellow-50 text-yellow-700 border-yellow-200'
-  };
-  return colors[category as keyof typeof colors] || colors.other;
-};
 
 export default function ProjectPopup({ open, onClose, title, image, link, bigDescription, technologies }: ProjectPopupProps) {
   const [imageExpanded, setImageExpanded] = useState(false);
