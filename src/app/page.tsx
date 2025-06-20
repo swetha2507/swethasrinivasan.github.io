@@ -37,7 +37,7 @@ export default function Home() {
                 <Image src="/assets/Me.jpg" alt="Swetha Srinivasan" width={192} height={192} className="object-cover w-full h-full rounded-full" />
               </div>
               <h1 className="text-3xl md:text-4xl font-extrabold text-[#e0e0e0] mt-4 mb-2 text-center">
-                Hey <span role="img" aria-label="wave" className="inline-block animate-wave">👋</span>, I'm Swetha
+                Hey <span role="img" aria-label="wave" className="inline-block animate-wave">👋</span>, I&apos;m Swetha
               </h1>
               <h2 className="text-xl md:text-2xl font-bold text-teal-400 mb-4 text-center hover:text-teal-300 transition-colors">
                 Software/Data Engineer
